@@ -71,6 +71,21 @@ We have to runa a command called `run_floorplan`, a super command that initiates
 The design looks like below post the floorplan,<br>
 ![image](https://user-images.githubusercontent.com/100553237/183479749-af4647c1-ea37-4b68-814a-deeef493abd7.png)
 
+
+* **Layout Design**
+In this step, we design an inverter using a spice deck file which is like below,<br>
+![image](https://user-images.githubusercontent.com/100553237/183483097-80f7c18b-0ff0-4291-a67a-c128272f6f26.png) <br>
+
+and the initial transient looks like, <br>
+![initial_transient_solution](https://user-images.githubusercontent.com/100553237/183464164-a3e59327-ab77-4f11-9382-5cdc72a8076d.png) <br>
+
+when we plot the output with respect to the input, the waveform looks like below, <br>
+![transient analysis](https://user-images.githubusercontent.com/100553237/183464161-07d79901-840e-4468-a6ae-50d0639a8466.png) <br>
+
+They layout looks like this, <br>
+![layout_view](https://user-images.githubusercontent.com/100553237/183464141-098d9ce7-be4e-4d8a-b004-9c9df659bcd4.png) <br>
+
+
 <br>
 Post the power distribution network is laid down, we have to place the standard cells in the core area so that the logic can be achieved, <br>
 placements happens in two stages called `global placement` and `detail placement`.<br>
@@ -86,6 +101,7 @@ the clock tree synthesis.<br>
 The design looks like below post the placement process <br>
 ![image](https://user-images.githubusercontent.com/100553237/183481473-4494ca96-06d1-4ca2-aff8-a8154876792e.png)
 <br>
+
 
 
 
