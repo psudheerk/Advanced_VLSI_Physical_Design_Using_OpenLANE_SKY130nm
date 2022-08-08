@@ -63,10 +63,31 @@ The total chip area of the design is given below, <br>
 <br>
 
 We have to runa a command called `run_floorplan`, a super command that initiates the commands like<br>
-`init_fp` creates the standard cells row<br>
-`ioplacer` places the io pads/io pins<br>
-`pdn` creates the power network with stripes made of top two metal layers<br>
-`tapcell` places the decap cells so that the latch up can be solved<br>
+`init_fp`   creates the standard cells row<br>
+`ioplacer`  places the io pads/io pins<br>
+`pdn`       creates the power network with stripes made of top two metal layers<br>
+`tapcell`   places the decap cells so that the latch up can be solved<br>
+
+The design looks like below post the floorplan,<br>
+![image](https://user-images.githubusercontent.com/100553237/183479749-af4647c1-ea37-4b68-814a-deeef493abd7.png)
+
+<br>
+Post the power distribution network is laid down, we have to place the standard cells in the core area so that the logic can be achieved, <br>
+placements happens in two stages called `global placement` and `detail placement`.<br>
+In global placement, the location of the standard cells is estimated and in the detail placement, the standard cells are actually placed <br>
+in the core area following all the legalization rules laid down by the foundry. <br>
+
+`RePLace` performs the global placement<br>
+`OpenDP`  performs the detail placement<br>
+
+The design is timing optimized as well post the placement process so that the timing violation will be minimal as possible before we proceed further with<br>
+the clock tree synthesis.<br>
+
+The design looks like below post the placement process <br>
+![image](https://user-images.githubusercontent.com/100553237/183481473-4494ca96-06d1-4ca2-aff8-a8154876792e.png)
+<br>
+
+
 
 
 
