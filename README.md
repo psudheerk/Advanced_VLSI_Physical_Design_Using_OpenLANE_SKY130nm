@@ -107,6 +107,11 @@ Until this stage the clock network in the design is ideal which means the clock 
 But now the clock is made propagated with clock buffers and clock inverters, and the clock delay will exists because of which the clock signal does not reach the clock pins at the same time<br>
 The less the insertion delay, the better is the design network.<br>
 
+Just like placement, Routing will be done in two stages i.e, global routing and detail routing.<br>
+After the detail routing, the design looks like below, <br>
+![image](https://user-images.githubusercontent.com/100553237/183485893-57f2153e-fb4b-4ad0-83aa-a23f301633ba.png)
+
+
 
 
 
