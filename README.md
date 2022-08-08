@@ -102,6 +102,11 @@ The design looks like below post the placement process <br>
 ![image](https://user-images.githubusercontent.com/100553237/183481473-4494ca96-06d1-4ca2-aff8-a8154876792e.png)
 <br>
 
+The clock tree synthesis will be synthesized by a tool called `TritonCTS`.<br>
+Until this stage the clock network in the design is ideal which means the clock reaches the clock pins at the same time only. <br>
+But now the clock is made propagated with clock buffers and clock inverters, and the clock delay will exists because of which the clock signal does not reach the clock pins at the same time<br>
+The less the insertion delay, the better is the design network.<br>
+
 
 
 
