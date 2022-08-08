@@ -1,0 +1,65 @@
+ Synthesis:
+
+total no of flip flops : 1613
+total no of cells	   : 14876
+total flop ratio 	   : 10.86%
+
+Utilization factor: netlist area/core area
+aspect ratio	   : height/width
+
+-------------------------------------------------------------------------------------------------------------
+Define location of preplaced cells:
+* partition the design into multiple modules
+* extend the IO pins
+* place them at the appropriate locations and hence they are called pre=placed cells.
+
+* Decoupling capacitor usage
+* voltage drop, ground bounce
+
+* Placement of repeaters to maintain the signal integrity.
+
+* No overlaps, abutments => standard cell legalization.
+
+* "magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef      read ../../tmp/merged.lef def read picorv32a.floorplan.def "
+
+* run_placement
+* half parameter wire length
+* overflow
+* target => converge the overflow
+
+Cell Design Flow
+
+* inputs => PDK, spice models, drc&lvs rules, libraries.
+* design steps => circuit design, layout design, characterization
+* outputs => circuit design language (CDL), GDSII, LEF, extracted spice netlist(.cir)
+
+Spice Deck
+* Defining the width and the length of the MOSFET
+* defining the nodes and naming them so that the components can be marked easily w.r.t them.
+* name drain gate source substrate <type> <width> <length>
+
+* Static behaviour simulation
+
+* 16-Mask CMOS process
+
+npspice extraction
+
+* magic command to view the layout
+* what command to view the type of the layer selected
+* extract all
+* ext2spice cthresh 0 rthresh 0
+* ext2spice => generates the spice netlist file in the pwd
+
+----------------------------------------------------------------------------------------------------------
+
+Day-4
+
+magic -T sky130A.tech sky130_inv.mag &
+
+grid 0.46um 0.34um 0.23um 0.17um
+
+lef write
+
+
+run_floorplan
+run_placement
